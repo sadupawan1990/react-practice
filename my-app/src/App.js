@@ -4,6 +4,7 @@ import './App.css';
 import Header from './header';
 import Login from './Login';
 import Logout from './Logout';
+import Counter from './Counter';
 
 class App extends React.Component {
   constructor(props){
@@ -30,6 +31,7 @@ class App extends React.Component {
           {this.state.isLoggedIn == true ? (<Logout onLoggedOut={(e,isLoggedOut,testparam) => this.LogoutHandler(e,isLoggedOut,testparam)}/>) : 
             (<Login onLogin={this.LoginClickHandler}/>)}
         </header>
+        <Counter />
       </div>
     );
   }
